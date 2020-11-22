@@ -1,0 +1,19 @@
+{
+  "name": "backend-challenge-wwc-201-oop",
+  "version": "1.0.0",
+  "description": "Versión orientada a objetos del reto número 1",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "MrTrukiny",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
