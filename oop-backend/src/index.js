@@ -1,11 +1,24 @@
 const colors = require('colors');
 const express = require('express');
 const server = express();
-
+const { json, urlencoded } = require('body-parser');
+const morgan = require('morgan');
+const cors = require('cors');
+const dotenv = require('dotenv');
 const { PORT } = require('../config');
+const { UserRoutes } = require('./routes/index');
+const { NotFoundMiddleware } = require('./middlewares/index');
 
-// Import your Routes
-// const { } = require('./routes');
+server.use(cors());
+server.use(json());
+server.use(urlencoded({ extended: true }));
+server.use(morgan('dev'));
+
+server.use('/api', UserRoutes);
+server.get('*', function (req, res) {
+  let notFound = new NotFoundMiddleware();
+  return notFound.errorResponse(res);
+});
 
 // Import your middleware
 // const { } = require('./middlewares');
