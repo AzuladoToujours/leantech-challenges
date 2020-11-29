@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Linda Gutiérrez",
+    "birthday": "1996-11-21",
+    "age": 24,
+    "temperature": 36.5,
+    "clothingColor": "blue",
+    "isPartying": true,
+    "role": "partycipant"
+  },
+  {
+    "name": "Eduardo Hernández",
+    "birthday": "1992-28-06",
+    "age": 28,
+    "temperature": 37.0,
+    "clothingColor": "green",
+    "isPartying": true,
+    "role": "partycipant"
+  },
+  {
+    "name": "Alexis Múnera",
+    "birthday": "1998-08-10",
+    "age": 23,
+    "temperature": 36.8,
+    "clothingColor": "black",
+    "isPartying": true,
+    "role": "bartender"
+  },
+  {
+    "name": "Pablo Arango",
+    "birthday": "1988-02-25",
+    "age": 32,
+    "temperature": 37.0,
+    "clothingColor": "green",
+    "isPartying": true,
+    "role": "dj"
+  },
+  {
+    "name": "Sherlock Holmes",
+    "birthday": "1854-12-24",
+    "age":165,
+    "temperature": 36.6,
+    "clothingColor": "white",
+    "isPartying": true,
+    "role": "partycipant"
+  },
+  {
+    "name": "John Watson",
+    "birthday": "1850-12-01",
+    "temperature": 37.0,
+    "age": 170,
+    "clothingColor": "red",
+    "isPartying": false,
+    "role": "partycipant"
+  }
+]

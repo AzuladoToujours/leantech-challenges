@@ -10,12 +10,20 @@ exports.validations = [
     'temperature',
     'Sin temperatura no me entra viejo; el formato es el siguiente: 36.5, 37.0, 37.8'
   ).matches(/^([0-9]{2})+\.([0-9]{1})$/),
-  //CHECK FOR EMAIL
-  check('email', 'Si va colocar email, coloquelo bien.').optional().isEmail(),
   //CHECK CLOTHES
-  check('clothesColor', 'Dizque el hombre invisible, jmm.')
-    .optional()
-    .matches(/[a-zA-Z]{1,40}/),
+  check('clothingColor', 'No me asare la party con esa percha.').isIn([
+    'green',
+    'blue',
+    'red',
+    'black',
+    'white',
+  ]),
+  check('isPartying', 'No es étereo pai, ¿está adentro o no?').isBoolean(),
+  check('role', '¿Cumpliendo el rol de payaso?').isIn([
+    'dj',
+    'partycipant',
+    'bartender',
+  ]),
 ];
 
 exports.userValidator = async (req, res, next) => {

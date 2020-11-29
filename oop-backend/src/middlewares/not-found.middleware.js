@@ -1,14 +1,3 @@
-class NotFoundError extends Error {
-  constructor() {
-    super();
-    this.name = 'NotFoundError';
-    this.error = 'Información no encontrada';
-    this.status = 404;
-  }
-
-  errorResponse(res) {
-    return res.status(this.status).json({ error: `${this.error}` });
-  }
-}
-
-module.exports = NotFoundError;
+module.exports = (req, res, next) => {
+  return res.status(404).send({ message: 'Page not found!' });
+};
