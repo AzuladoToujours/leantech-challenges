@@ -2,7 +2,10 @@ const { check, validationResult } = require('express-validator');
 
 exports.validations = [
   //NAMES ARE NOT NULL
-  check('name', '¿Cómo le decimos pues?').matches(/[a-zA-Z]{1,40}/),
+
+  check('name', 'Como raro ese nombre.').matches(
+    /^[^\s]([a-zA-Z])+[\s]([a-zA-Z])+[^\s]$/
+  ),
   //BIRTHDAY MUST BE IN THE FORMAT
   check('birthday', '¿Nació ayer o qué papá?').isDate(),
   //TEMPERATURE MUST BE IN THE FORMAT
@@ -11,13 +14,12 @@ exports.validations = [
     'Sin temperatura no me entra viejo; el formato es el siguiente: 36.5, 37.0, 37.8'
   ).matches(/^([0-9]{2})+\.([0-9]{1})$/),
   //CHECK CLOTHES
-  check('clothingColor', 'No me asare la party con esa percha.').isIn([
-    'green',
-    'blue',
-    'red',
-    'black',
-    'white',
-  ]),
+  check(
+    'clothingColor',
+    'Con esas hilachas no me entra, se va cambiando de color.'
+  )
+    .optional()
+    .isIn(['green', 'blue', 'red', 'black', 'white']),
   check('isPartying', 'No es étereo pai, ¿está adentro o no?').isBoolean(),
   check('role', '¿Cumpliendo el rol de payaso?').isIn([
     'dj',
@@ -45,6 +47,16 @@ exports.validateTemperature = (req, res, next) => {
     next();
   } else {
     let errors = ['Mera vuelta con esa temperatura pai.'];
+    return res.status(400).json({ errors });
+  }
+};
+
+exports.validateDate = (req, res, next) => {
+  let year = new Date(req.body.birthday).getFullYear();
+  if (year >= 1800) {
+    next();
+  } else {
+    let errors = ['El mísmisimo Tutankamón.'];
     return res.status(400).json({ errors });
   }
 };

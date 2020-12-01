@@ -24,6 +24,39 @@ class UsersRepository {
       return [];
     }
   }
+
+  async getDjEvent(query) {
+    try {
+      const docs = await User.aggregate(query);
+
+      return docs;
+    } catch (e) {
+      console.error(e);
+      return [];
+    }
+  }
+
+  async updateOne(id) {
+    try {
+      let user = await User.findOne({ _id: id });
+      if (!user) {
+        return false;
+      }
+      let reversePartying = !user.isPartying;
+      let updatedDoc = await User.findOneAndUpdate(
+        { _id: id },
+        { isPartying: reversePartying },
+        { new: true }
+      )
+        .lean()
+        .exec();
+
+      return updatedDoc;
+    } catch (e) {
+      console.error(e);
+      return false;
+    }
+  }
 }
 
 module.exports = new UsersRepository();

@@ -14,7 +14,7 @@ class UsersController {
     }
   }
 
-  async getAll(req, res) {
+  async getAllByStatus(req, res) {
     // Call the service
     const response = await UsersService.getAllByStatus();
 
@@ -22,6 +22,50 @@ class UsersController {
       return res.status(200).send(response.users);
     } else {
       return res.status(200).json({ message: response.message });
+    }
+  }
+
+  async getAll(req, res) {
+    // Call the service
+    const response = await UsersService.getAll();
+
+    if (response.success) {
+      return res.status(200).send(response.users);
+    } else {
+      return res.status(200).json({ message: response.message });
+    }
+  }
+
+  async getAllWithAvocados(req, res) {
+    // Call the service
+    const response = await UsersService.getAllWithAvocados();
+
+    if (response.success) {
+      return res.status(200).send(response.users);
+    } else {
+      return res.status(200).json({ message: response.message });
+    }
+  }
+
+  async getDjEvent(req, res) {
+    // Call the service
+    const response = await UsersService.getDjEvent();
+
+    if (response.success) {
+      return res.status(200).send(response.users);
+    } else {
+      return res.status(200).json({ message: response.message });
+    }
+  }
+
+  async updateOne(req, res) {
+    let { id } = req.params;
+    const response = await UsersService.updatePartying(id);
+
+    if (response.success) {
+      return res.status(200).send(response.update);
+    } else {
+      return res.status(400).json({ message: response.message });
     }
   }
 }
