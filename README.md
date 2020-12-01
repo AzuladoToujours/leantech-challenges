@@ -22,5 +22,5 @@ La aplicación correrá por defecto en:
 localhost:4000/api/
 ```
 
-**¡Nos vemos en el siguiente reto!**
+**Esto ha sido todo,!Gracias por los retos, nos vemos pronto!**
 
