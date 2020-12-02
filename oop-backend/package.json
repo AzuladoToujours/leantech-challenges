@@ -1,19 +1,32 @@
 {
-  "name": "backend-challenge-wwc-201-oop",
+  "name": "backend-challenge-wwc-202-oop",
   "version": "1.0.0",
-  "description": "Versión orientada a objetos del reto número 1",
-  "main": "index.js",
+  "description": "Versión orientada a objetos del reto número 2",
+  "main": "server.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
   },
   "author": "MrTrukiny",
   "license": "MIT",
   "dependencies": {
+    "body-parse": "^0.1.0",
     "colors": "^1.4.0",
-    "express": "^4.17.1"
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.7.0",
+    "fs": "0.0.1-security",
+    "mongoose": "^5.10.15",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7"
   },
   "devDependencies": {
-    "nodemon": "^2.0.6"
+    "babel-eslint": "^10.1.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.2.1"
   }
 }

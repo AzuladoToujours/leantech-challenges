@@ -1,0 +1,75 @@
+[
+  {
+    "name": "Linda Gutiérrez",
+    "birthday": "1996-11-21",
+    "age": 24,
+    "temperature": 36.5,
+    "clothingColor": "black",
+    "isPartying": false,
+    "role": "partycipant"
+  },
+  {
+    "name": "Eduardo Hernández",
+    "birthday": "1992-28-06",
+    "age": 28,
+    "temperature": 37.0,
+    "clothingColor": "green",
+    "isPartying": true,
+    "role": "partycipant"
+  },
+  
+  {
+    "name": "Sherlock Holmes",
+    "birthday": "1854-12-24",
+    "age":165,
+    "temperature": 36.6,
+    "clothingColor": "white",
+    "isPartying": true,
+    "role": "partycipant"
+  },
+  {
+    "name": "John Watson",
+    "birthday": "1850-12-01",
+    "temperature": 37.0,
+    "age": 170,
+    "clothingColor": "red",
+    "isPartying": true,
+    "role": "partycipant"
+  },
+  {
+    "name": "Diego Maradona",
+    "birthday": "1960-10-30",
+    "temperature": 37.0,
+    "age": 60,
+    "clothingColor": "blue",
+    "isPartying": false,
+    "role": "partycipant"
+  },
+  {
+    "name": "Alexis Múnera",
+    "birthday": "1998-08-10",
+    "age": 23,
+    "temperature": 36.8,
+    "clothingColor": "red",
+    "isPartying": false,
+    "role": "bartender"
+  },
+  {
+    "name": "Pablo Arango",
+    "birthday": "1988-02-25",
+    "age": 32,
+    "temperature": 37.0,
+    "clothingColor": "white",
+    "isPartying": false,
+    "role": "dj"
+  },
+  {
+    "name": "Camilo Mejía",
+    "birthday": "1998-05-23",
+    "age": 22,
+    "temperature": 36.8,
+    "clothingColor": "white",
+    "isPartying": false,
+    "role": "dj"
+  }
+]
