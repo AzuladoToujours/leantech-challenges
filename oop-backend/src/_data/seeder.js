@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const colors = require('colors');
 
 // Get Mongo URI from config
-const { MONGO_URI } = require('../../config')
+const { MONGO_URI } = require('../../config');
 
 // Load model User
 const { User } = require('../models');
@@ -13,7 +13,7 @@ mongoose.connect(MONGO_URI, {
   useCreateIndex: true,
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useFindAndModify: true
+  useFindAndModify: true,
 });
 
 // Read JSON files
